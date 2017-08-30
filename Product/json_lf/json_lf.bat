@@ -1,0 +1,1 @@
+C:\Ruby23-x64\bin\ruby.exe main.rb %1 > out.txt
