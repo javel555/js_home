@@ -265,4 +265,9 @@ mysql_secure_installation
 ruby, rails, migrate
 add_column [テーブル名]], [カラム名], [型], :after => [何のカラムの横に入れるか], comment: [コメント（要gem?）]
 ```
-
+```
+マイグレーションファイルのデバッグ
+ruby, rails, migrate
+rake db:migrate　で適応して、思ったのと違うなら
+rake db:rollback　で戻せる
+```
