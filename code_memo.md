@@ -260,3 +260,9 @@ Mysql5.7で初期設定
 mysql
 mysql_secure_installation
 ```
+```
+マイグレーションファイルでカラム追加
+ruby, rails, migrate
+add_column [テーブル名]], [カラム名], [型], :after => [何のカラムの横に入れるか], comment: [コメント（要gem?）]
+```
+
