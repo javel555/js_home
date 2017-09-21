@@ -109,7 +109,7 @@ rails
 ```
 環境定義
 rails
-gem 'dotenv'を使っている場合、railsの環境定義は、 `.env.development` とかに書く。
+gem 'dotenv-rails'を使っている場合、railsの環境定義は、 `.env.development` とかに書く。
 環境定義の参照はENV['キー名']で行う。
 ```
 ```
@@ -270,4 +270,50 @@ add_column [テーブル名]], [カラム名], [型], :after => [何のカラム
 ruby, rails, migrate
 rake db:migrate　で適応して、思ったのと違うなら
 rake db:rollback　で戻せる
+```
+```
+rubyで後置if
+ruby
+send_mail_to(user) if user.active?
+```
+```
+rubyで三項演算子
+ruby
+user.admin? ? "I appreciate for that." : "Thanks"
+```
+```
+SNSでログイン
+rails gem
+gem "devise"
+gem "omniauth-twitter"
+deviseは必須じゃないかも？
+```
+```
+N+1検出
+rails gem
+gem "bullet"
+入れただけでは機能しないので、 config/development.rb に以下の追記が必要
+  # enable bullet
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.bullet_logger = true
+    Bullet.rails_logger = true
+  end
+```
+```
+デバッガサポート
+ruby rails gem
+gem 'pry-rails'
+gem 'pry-doc'
+gem "pry-byebug"
+pry-rails : railsコンソールをpryに変更（デフォルトはirb）
+pry-doc   : pryのshow-methodコマンドで、C言語レイヤーのドキュメントも表示
+pry-byebug: binding.pryでデバッグできるようになる
+```
+```
+環境定義を.envファイルで管理
+ruby rails gem
+gem "dotenv-rails"
+hog="fuga"で登録、
+ENV["hoge"]でアクセスできる
 ```
