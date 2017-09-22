@@ -142,6 +142,8 @@ Vagrantサポート
 Bookmarks
 vscode
 エディタにブックマーク機能を付与
+Ctrl+Alt+K　でブックマーク
+Ctrl+P > bookmark hogehoge　でブックマークした物に対するコマンド
 ```
 ```
 WebSearch
@@ -152,11 +154,13 @@ vscode
 Auto-Open Markdown Preview
 vscode
 マークダウンを横に出しながら編集
+微妙かもしれない
 ```
 ```
 Git History (git log)
 vscode
 Gitの履歴をVsCodeから確認
+ちょうべんり
 ```
 ```
 setting.json
