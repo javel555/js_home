@@ -287,14 +287,14 @@ user.admin? ? "I appreciate for that." : "Thanks"
 ```
 ```
 SNSでログイン
-rails gem
+rails, gem
 gem "devise"
 gem "omniauth-twitter"
 deviseは必須じゃないかも？
 ```
 ```
 N+1検出
-rails gem
+rails, gem
 gem "bullet"
 入れただけでは機能しないので、 config/development.rb に以下の追記が必要
   # enable bullet
@@ -306,7 +306,7 @@ gem "bullet"
 ```
 ```
 デバッガサポート
-ruby rails gem
+ruby, rails, gem
 gem 'pry-rails'
 gem 'pry-doc'
 gem "pry-byebug"
@@ -316,8 +316,43 @@ pry-byebug: binding.pryでデバッグできるようになる
 ```
 ```
 環境定義を.envファイルで管理
-ruby rails gem
+ruby, rails, gem
 gem "dotenv-rails"
 hog="fuga"で登録、
 ENV["hoge"]でアクセスできる
+```
+```
+mysqlでユーザ一覧の取得
+mysql
+use mysql #mysqlデータベースを使用する。
+select user, host from user;
+```
+```
+mysqlでユーザの追加
+mysql
+GRANT 権限 ON DB名.テーブル名　TO ユーザ名　INDENTIFIED BY 'パスワード'
+
+* localhostでのアクセスを許可するユーザを作成
+mysql> GRANT ALL PRIVILEGES ON db1.*
+mysql> TO 'kororo@localhost'
+mysql> IDENTIFIED BY 'test_pass';
+
+* localhost意外のすべてのホストからのアクセスを許可するユーザ
+mysql> GRANT ALL PRIVILEGES ON db1.*
+mysql> TO 'kororo'
+mysql> IDENTIFIED BY 'test_pass';
+```
+```
+VagrantゲストOSのMysqlへ、HeidiSQLでアクセス
+vagrant, mysql, heidisql
+
+### 設定
+* ネットワーク種別：MySQL（SSHトンネル）
+* ホスト名　　　　：vagrant up時に表示される"default: SSH address: 127.0.0.1:2222"
+* ユーザ・パス　　：mysqlのログインユーザ情報　※localhost扱いになるので注意
+
+### SSHトンネル
+* plink.exe　　　：仕方ないのでインストールする
+* SSHホストポート：vagrant up時に表示される"default: SSH address: 127.0.0.1:2222"
+* ユーザー名・パス：SSHのユーザ名、基本vagrant/vagrant
 ```
