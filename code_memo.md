@@ -1,5 +1,77 @@
 # プログラムメモ
 
+## 開発環境構築
+#### フォルダ構成
+ルート配下にMainSpaceを作って何かとそこを使う
+フォルダ構成基本
+Work
+└01.DTM
+ 02.PG
+ 03.Unity
+ 04.Other
+
+#### git
+
+#### sourcetree
+https://ja.atlassian.com/software/sourcetree
+
+#### VSCode
+https://code.visualstudio.com/
+
+#### 決め打ちで入れるエクステンション
+- Classy Naming
+- vscode-icons
+- WebSearch
+- Bookmarks
+- Git History (git log)
+
+#### Unity
+https://unity3d.com/jp/
+VisualStudioは重いので入れない
+
+#### UnityのエディタをVSCodeにする
+- Unityにプラグインを投入
+https://www.assetstore.unity3d.com/jp/#!/content/45320
+
+- Unity側でVSCodeを設定する
+Unity > Preferences > VSCode > Enable Integration をチェックする
+Unity > Preferences > VSCode > Use Unity Debugger をチェックする
+Install Unity Debuggerを押下してVSCodeにインストール
+
+- VSCodeでUnityプロジェクトを開く
+Assets > Open C# Project in Codeを実行してVSCodeを使用する。
+この手順を踏まないと、VSCodeからの静的コード解析やDebuggerが利用できません。
+
+- Unity固有のコールバックも補完
+https://github.com/anchan828/unity-snippets
+ここからClone or DownloadのZIPで落とす。
+Readmeに入れ方は載ってるので参照
+
+#### ruby
+公式はソースによる配布なのでRubyInstallerを使う
+https://rubyinstaller.org/
+DxRuby使うかも知れないので32bitを入れる。
+DevKitは、gemの頒布がソースコード形式なので、ビルドする時に使うツール郡。入れとく
+
+#### rubyのexe化
+
+#### node
+
+#### フォトショ
+
+#### Blender
+
+#### FLStudio
+
+
+DBクライアント
+
+ルビーのEXE化環境
+ｰ>ocra
+
+
+
+
 
 ## 記述ルール
 - 基本的には ` ``` ` で囲って並べる。
@@ -11,13 +83,11 @@
 markdown
 明示的な改行は、1行開けると実現できる。普通に改行しても、マークダウン表示だと改行されない。
 ```
-
 ```
 マークダウンで表題
 markdown
 `# README` とすると表題になる。#は最大6個まで繋げられる。繋げた個数に応じて `<h1>～<h6>` になる。
 ```
-
 ```
 マークダウンでリスト
 markdown
@@ -29,7 +99,6 @@ markdown
 
 という感じでスペースを4つ付けるとできる。
 ```
-
 ```
 Vagrantで動いているRailsをRubyMineでデバッグする。
 ruby, rubymine
@@ -62,9 +131,7 @@ Local root folder: ローカル側のプロジェクトフォルダ
  4. RubyMineからアタッチ
 `Run=>Debug` から上記で作成した実行環境を実行する。
 ゲストOSがリモートデバッグの待ち受けを行っていれば、 `rails s` が動き出すはず。
-
 ```
-
 ```
 puts と p
 ruby
