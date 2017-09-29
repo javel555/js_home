@@ -3,17 +3,30 @@
 ## 開発環境構築
 #### フォルダ構成
 ルート配下にMainSpaceを作って何かとそこを使う
+```
 フォルダ構成基本
 Work
 └01.DTM
  02.PG
  03.Unity
  04.Other
+```
+
+#### SakuraEditor
+http://sakura-editor.sourceforge.net/
+
+#### Cassava(CSVEditor)
+http://www.asukaze.net/
+
+#### 7zip
+https://sevenzip.osdn.jp/
 
 #### git
+TODO
 
 #### sourcetree
-https://ja.atlassian.com/software/sourcetree
+https://ja.atlassian.com/software/sourcetree  
+TODO
 
 #### VSCode
 https://code.visualstudio.com/
@@ -26,48 +39,77 @@ https://code.visualstudio.com/
 - Git History (git log)
 
 #### Unity
-https://unity3d.com/jp/
+https://unity3d.com/jp/  
 VisualStudioは重いので入れない
 
 #### UnityのエディタをVSCodeにする
+https://qiita.com/53able@github/items/e7c6a5ea59106348df4e#unity%E5%81%B4%E3%81%A7vscode%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B
+
 - Unityにプラグインを投入
 https://www.assetstore.unity3d.com/jp/#!/content/45320
 
 - Unity側でVSCodeを設定する
-Unity > Preferences > VSCode > Enable Integration をチェックする
-Unity > Preferences > VSCode > Use Unity Debugger をチェックする
-Install Unity Debuggerを押下してVSCodeにインストール
+  - Unity > Preferences > VSCode > Enable Integration をチェックする
+  - Unity > Preferences > VSCode > Use Unity Debugger をチェックする
+  - Install Unity Debuggerを押下してVSCodeにインストール
 
-- VSCodeでUnityプロジェクトを開く
-Assets > Open C# Project in Codeを実行してVSCodeを使用する。
+- VSCodeでUnityプロジェクトを開く  
+Assets > Open C# Project in Codeを実行してVSCodeを使用する。  
 この手順を踏まないと、VSCodeからの静的コード解析やDebuggerが利用できません。
 
-- Unity固有のコールバックも補完
-https://github.com/anchan828/unity-snippets
-ここからClone or DownloadのZIPで落とす。
+- Unity固有のコールバックも補完  
+https://github.com/anchan828/unity-snippets  
+ここからClone or DownloadのZIPで落とす。  
 Readmeに入れ方は載ってるので参照
 
 #### ruby
-公式はソースによる配布なのでRubyInstallerを使う
+* 基本はRubyInstallerを使う  
 https://rubyinstaller.org/
-DxRuby使うかも知れないので32bitを入れる。
-DevKitは、gemの頒布がソースコード形式なので、ビルドする時に使うツール郡。入れとく
 
-#### rubyのexe化
+* DevKitは、gemの頒布がソースコード形式なので、ビルドする時に使うツール郡。入れとく
 
-#### node
+* rubyソースをexe化したいのであおたくさんのバイナリを使用する。  
+http://blog.aotak.me/post/144865493601/ruby-22-%E3%81%A8-23-%E3%81%A7%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%92-ocra-%E3%82%92%E4%BD%BF%E3%82%8F%E3%81%9A%E3%81%AB%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%AD%E3%83%B3%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%8C%96%E3%81%99%E3%82%8B
 
+EXE化するときは `rpk [イニシャルスクリプト]`
+入れ込んだgemや他ソースも入れてくれる
+
+* パスを通す
+
+* gemが古過ぎるとSSL証明書が失効してるので手動でアップデート  
+http://guides.rubygems.org/ssl-certificate-update/  
+終わったら `gem update`
+
+#### DxRuby
+`gem install dxruby`
+
+#### Ruby on Rails
+https://www.oiax.jp/rails/zakkan/rails_4_2_installation_on_windows.html
+
+* Bundler のインストール  
+`gem install bundler`
+
+* Ruby on Railsのインストール
+`gem install rails --no-ri --no-rdoc`
+
+* RoRの初期化
+```
+rails new foo --skip-bundle
+cd foo
+bundle install
+```
+
+#### DBクライアント(HidiSQL)
+https://www.heidisql.com/
+
+#### node  
+TODO
 #### フォトショ
-
+TODO
 #### Blender
-
+TODO
 #### FLStudio
-
-
-DBクライアント
-
-ルビーのEXE化環境
-ｰ>ocra
+TODO
 
 
 
