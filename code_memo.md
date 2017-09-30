@@ -119,11 +119,49 @@ https://www.heidisql.com/
 #### node  
 TODO
 #### フォトショ
-TODO
-#### Blender
+TODO#### Blender
 TODO
 #### FLStudio
 TODO
+
+## 実行環境構築
+#### AWS EC2
+* rootに入る
+`sudo su -`
+* 時計を日本の物に
+```
+# change japan local
+cp /usr/share/zoneinfo/Japan /etc/localtime
+# ntpd start
+/etc/init.d/ntpd start
+chkconfig ntpd on
+```
+* パッケージマネージャの更新
+`yum update -y`
+* gitのインストール
+`yum install git`
+
+#### デプロイ
+* rubyのインストール
+  * rbenv
+```
+rm -rf /usr/local/rbenv
+git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv
+git clone git://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
+echo 'export PATH="/usr/local/rbenc/bin:$PATH"' >> /etc/profile.d/env.sh
+
+
+
+rm -rf /usr/local/rbenv
+
+
+* アプリフォルダの作成
+```
+cd /
+mkdir MainSpace
+cd MainSpace
+git clone [url]
+```
 
 
 
@@ -479,3 +517,15 @@ vagrant, mysql, heidisql
 * SSHホストポート：vagrant up時に表示される"default: SSH address: 127.0.0.1:2222"
 * ユーザー名・パス：SSHのユーザ名、基本vagrant/vagrant
 ```
+```
+Linuxでファイル削除
+linux shell
+rm -r -f ディレクトリ名
+```
+```
+AWSでrootログイン
+aws
+sudo su -
+を打ち込む
+```
+
