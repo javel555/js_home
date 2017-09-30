@@ -22,11 +22,11 @@ http://www.asukaze.net/
 https://sevenzip.osdn.jp/
 
 #### git
-TODO
+https://git-for-windows.github.io/
 
 #### sourcetree
-https://ja.atlassian.com/software/sourcetree  
-TODO
+https://ja.atlassian.com/software/sourcetree  
+初期リポジトリの設定はしなくてよいかも
 
 #### VSCode
 https://code.visualstudio.com/
