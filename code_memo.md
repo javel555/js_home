@@ -372,6 +372,8 @@ vscode
     // ウィンドウの拡大率
     "window.zoomLevel": 0,
     // ミニマップの横幅
+
+    
     "editor.minimap.maxColumn": 50
 
     // マークダウンプレビューのフォントサイズ
