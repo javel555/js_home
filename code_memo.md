@@ -99,6 +99,20 @@ cd foo
 bundle install
 ```
 
+#### Vagrant
+* ソフトのダウンロード
+https://www.vagrantup.com/
+ホスト用のVirtueBox
+http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html?ssSourceSiteId=otnjp
+で各々ダウンロード
+
+* Boxのダウンロード
+CentOS6.5
+`vagrant box add CentOS65 https://github.com/2creatives/vagrant-centos/releases/download/v6.5.3/centos65-x86_64-20140116.box`
+
+* Vagrant配置準備(Vagrantファイルの生成)
+`vagrant init CentOS65`
+
 #### DBクライアント(HidiSQL)
 https://www.heidisql.com/
 
