@@ -21,6 +21,9 @@ http://www.asukaze.net/
 #### 7zip
 https://sevenzip.osdn.jp/
 
+#### ピストンコラージュ
+http://studiopixel.sakura.ne.jp/pxtone/
+
 #### git
 https://git-for-windows.github.io/
 
